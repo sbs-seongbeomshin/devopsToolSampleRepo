@@ -1,6 +1,7 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { Container } from 'typedi';
 import { AmsService } from '../../services';
+import { BmsService } from '../../services';
 import { IAmsInputDTO } from '../../interfaces/IAms';
 import { eventEmitter, Events } from '../../common/utils/eventEmitter';
 
@@ -16,8 +17,10 @@ export default (app: Router) => {
       const readRes = await AmsService.readAms(data)
       console.log(readRes)
 
-      // Emit Send Email Event
-      eventEmitter.emit(Events.SEND_EMAIL, {email: 'sbs@soulenergy.co.kr'})
+      await BmsService.readBms()
+
+      // // Emit Send Email Event
+      // eventEmitter.emit(Events.SEND_EMAIL, {email: 'sbs@soulenergy.co.kr'})
 
       // const res2 = await AmsService.createAms(data)
       // console.log(res2)
