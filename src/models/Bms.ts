@@ -7,6 +7,8 @@ const BmsSchema = new mongoose.Schema(
       type: Number,
       index: true
     },
+  }, {
+    collection: 'bmsLog_2203'
   }
 )
 

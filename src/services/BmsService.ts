@@ -7,7 +7,7 @@ const dbUrl = config.databaseURL?.concat('/bms')
 const bmsDb = mongoose.createConnection(<string>dbUrl);
 
 const readBms: any = async () => {
-  const coll = bmsDb.model('bms', BmsSchema);
+  const coll = bmsDb.model('bmsLog_2203', BmsSchema);
   const res = await coll.findOne({mcno:10001})
   console.log(res)
 }
