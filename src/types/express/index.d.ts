@@ -7,7 +7,7 @@ declare global {
     }    
   }
 
-//   namespace Models {
-//     export type UserModel = Model<IUser & Document>;
-//   }
+  namespace Models {
+    export type AmsModel = Model<any>;
+  }
 }
