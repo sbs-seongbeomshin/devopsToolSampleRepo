@@ -1,0 +1,25 @@
+swagger: "2.0"
+info:
+  description: "sample app"
+  version: "1.0.0"
+  title: "swagger"
+  termsOfService: "http://swagger.io/terms"
+  contact:
+    email: "sbs@soulenergy.co.kr"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "me"
+basePath: "/v2"
+tags:
+- name: "bms"
+  description: "bms api"
+schemes:
+- "https"
+- "http"
+paths:
+  /bms:
+    post:
+      tags:
+      - "bms"
+      summary: "bms api"
